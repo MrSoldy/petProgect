@@ -1,0 +1,44 @@
+    .bodyRegList{
+        width: 1000px;
+        height: 750px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #222;
+    }
+   .RegForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 15px;
+        background-color: #d2dadc;
+        color: rgb(121, 82, 82);
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 15px;    
+    }
+    .RegForm input, .RegForm button{
+        width: 250px;
+        margin: 5px;
+        padding: 7px;
+        border: none;
+    
+    }
+    .RegForm button{
+        width: 264px;
+        margin: 5px;
+        padding: 7px;
+        border: none;
+        background-color: rgb(82, 82, 230);
+        color: #fff;
+        border-radius: 0 0 15px 15px ;
+    }
+    .RegForm button:active {
+        transform: scale(0.98);
+           box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
+
+    

@@ -1,0 +1,53 @@
+.bodyAuthList{
+    width: 1000px;
+    height: 750px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #222;
+    }
+    .AuthForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 15px;
+        background-color: #d2dadc;
+        color: rgb(121, 82, 82);
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 15px;    
+    }
+    .AuthForm input, .AuthForm button{
+        width: 250px;
+        margin: 5px;
+        padding: 7px;
+        border: none;
+    
+    }
+    .AuthForm button{
+        width: 264px;
+        margin: 5px;
+        padding: 7px;
+        border: none;
+        background-color: rgb(82, 82, 230);
+        color: #fff;
+        border-radius: 0 0 15px 15px ;
+    }
+    .AuthForm button:active {
+        transform: scale(0.98);
+           box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
+
+    .create:hover{
+        color: blue;
+        border-bottom: 1px solid blue;
+    }
+    .create:active{
+        color: blue;
+        transform: scale(0.98);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+        border: none;
+    }
