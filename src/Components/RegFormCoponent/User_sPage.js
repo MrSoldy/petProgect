@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from "react";
-// import { ContFriends } from "./Conteiners/bodyContFriends/ContFriends";
-// import { ContImage } from "./Conteiners/bodyContImage/ContImage";
+import { ContFriends } from "./Conteiners/bodyContFriends/ContFriends";
+ import { ContImage } from "./Conteiners/bodyContImage/ContImage";
 import { ContMyPage } from "./Conteiners/bodyContMyPage/ContMyPage";
 import { ContPeople } from "./Conteiners/bodyContPeople/ContPeople";
 import { ContMyMessage } from "./Conteiners/bodyContMyMessage/ContMyMessage";
@@ -31,21 +31,22 @@ export const Page = ({ setAuth, User , setUser}) => {
   //    (accepted.indexOf(numberBtn) === -1)&&(setAccepted([...accepted , numberBtn].sort()))
   // }, [numberBtn]);
 
-  // useEffect(() => {
-  //   setFriends(friends.filter((el) => el.id !== del));
-  //   setAccepted(accepted.filter((el) => el !== del))
-  // }, [del]);
+  useEffect(() => {
+    setFriends(friends.filter((el) => el.id !== del));
+    setAccepted(accepted.filter((el) => el !== del))
+  }, [del]);
 
-  // useEffect(() => {
-  //   if (
-  //     (newFriend.id &&
-  //     newFriend.name &&
-  //     newFriend.secondname &&
-  //     newFriend.phoneNumber)&&((friends.filter((el) => el.id === newFriend.id)).length===0)
-  //   ) {
-  //     setFriends([...friends, newFriend]);
-  //   }
-  // }, [newFriend]);
+  useEffect(() => {
+    console.log(newFriend)
+    if (
+      (newFriend.id &&
+      newFriend.name &&
+      newFriend.secondname &&
+      newFriend.phoneNumber)&&((friends.filter((el) => el.id === newFriend.id)).length===0)
+    ) {
+      setFriends([...friends, newFriend]);
+    }
+  }, [newFriend]);
 
   return (
     <div className="bodyRegAuth">
@@ -55,7 +56,6 @@ export const Page = ({ setAuth, User , setUser}) => {
       </header>
       <div className="contUsers">
         <aside className="asideUserPage">
-          {/* <Router> */}
            <button className="Nav" id={"a"+numBtn} onClick={()=>setNumBtn(1)}>Моя страница</button>
           <button className="Nav" id={"b"+numBtn} onClick={()=>setNumBtn(2)}>Мои cобщения</button>
           <button className="Nav" id={"c"+numBtn} onClick={()=>setNumBtn(3)}>Друзья</button>
@@ -63,22 +63,21 @@ export const Page = ({ setAuth, User , setUser}) => {
           <button className="Nav" id={"e"+numBtn} onClick={()=>setNumBtn(5)}>Музыка</button>
           <button className="Nav" id={"f"+numBtn} onClick={()=>setNumBtn(6)}>Фильмы</button>
           <button className="Nav" id={"g"+numBtn} onClick={()=>setNumBtn(7)}>Люди</button>
-          {/* </Router> */}
-          {/* <Switch>
-          <Route path="/about">
-          <main className="mainUserPage">
-          <ContMyPage User={User}/>
-         </main>
-         </Route>
-         </Switch> */}
-
-
         </aside>
         <main className="mainUserPage">
           {(numBtn===1)?<ContMyPage User={User}/>
           :(numBtn===2)?<ContMyMessage  User={User} people={people} />
-          // :(numBtn===3)?<ContFriends setDel={setDel} friends={friends} add={add} setAdd={setAdd} setNewFriend={setNewFriend}/>
-          // :(numBtn===4)?<ContImage/>
+          :(numBtn===3)?<ContFriends User={User} 
+                                      setNumberBtn={setNumberBtn}  
+                                      setInfoProfile={setInfoProfile} 
+                                      infoProfile={infoProfile} 
+                                      people={people} setDel={setDel} 
+                                      friends={friends} 
+                                      accepted={accepted} 
+                                      add={add} 
+                                      setAdd={setAdd} 
+                                      setNewFriend={setNewFriend}/>
+          :(numBtn===4)?<ContImage/>
           :(numBtn===5)?"no"
           :(numBtn===6)?"no"
           :(numBtn===7)&&<ContPeople  infoProfile={infoProfile} 

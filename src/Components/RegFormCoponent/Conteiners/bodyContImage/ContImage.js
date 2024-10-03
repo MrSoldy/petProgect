@@ -34,8 +34,14 @@ export const ContImage = ()=> {
       } else {
         return (
             <div className="imgAPIBlock" >
-         {items.map((item) => (<div className="APINameBlock"><img key={(Symbol)} className="imgAPI" src={item.image} alt="fox"/><a href={item.link} target="_blank">{item.link.slice(-3)}</a></div>))}
+         {items.map((item) => (<div className="APINameBlock">
+                                  <img key={(Symbol)} className="imgAPI" src={item.image} alt="fox"/>
+                                  <a href={item.link} target="_blank">{item.link.slice(-3)}</a>
+                              </div>
+          ))}
+
          </div>
+
         );
       }
     }

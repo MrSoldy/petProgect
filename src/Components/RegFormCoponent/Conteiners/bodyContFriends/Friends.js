@@ -12,8 +12,7 @@ export const Friends = ({ friend, setDel }) => {
     <div  className="friendsBLock" >
       {edit ? <EditForm edit={edit} setEdit={setEdit} form={form} setForm={setForm} /> : <Friend form={form}/>}
       <div className="buttonsBlock">
-        <button>написать</button>
-        <button onClick={() => setEdit(!edit)}>изменить</button>
+        <button onClick={() => alert("пока что в разработке, попробуйте через вкладку 'ЛЮДИ -> Профиль -> Написать' ")}>написать</button>
         <button onClick={() => setDel(friend.id)}>удалить</button>
       </div>
     </div>

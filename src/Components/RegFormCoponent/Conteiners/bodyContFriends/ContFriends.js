@@ -1,11 +1,11 @@
 import React from "react";
 import { AddForm } from "./Forms";
 import { Friends } from "./Friends";
+import classes from "../bodyContPeople/StyleContPeople.module.css"
 
-export const ContFriends=({setDel, friends, add, setAdd, setNewFriend})=>{
+export const ContFriends=({setDel, friends, add, setAdd, setNewFriend, User , people, setInfoProfile, setProfile, setNumberBtn, accepted})=>{
     return(
         <>
-          {add ? <AddForm setNewFriend={setNewFriend} setAdd={setAdd} /> : ""}
           <span className="nameTable">Список твоих друзей</span>
           <div className="usersAuth">
             {friends.length > 0 ? (
@@ -16,9 +16,7 @@ export const ContFriends=({setDel, friends, add, setAdd, setNewFriend})=>{
               <span> у тебя еще нет друзей</span>
             )}
           </div>
-          <button className="btnAddFriend" onClick={() => setAdd(!add)}>
-            Добавить друга
-          </button>
+
         </>
     )
 }
