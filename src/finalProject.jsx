@@ -14,10 +14,10 @@ return(
     : demo == 2 ? <Legend/> 
     : demo == 3 ? <Slider/>
     : demo == 4 && <RegApp/>)}  
-    <div style={{width:"70px", backgroundColor:"orange", color: "black",  border:"1px solid black"}} onClick={()=>setDemo(1)}>1 проект</div> 
-    <div style={{width:"70px", backgroundColor:"orange", color: "black",  border:"1px solid black"}} onClick={()=>setDemo(2)}>2 проект</div> 
-    <div style={{width:"70px", backgroundColor:"orange",  color: "black", border:"1px solid black"}}  onClick={()=>setDemo(3)}>3 проект</div> 
-    <div style={{width:"70px", backgroundColor:"orange",  color: "black", border:"1px solid black"}}  onClick={()=>setDemo(4)}>4 проект</div> 
+    <div style={{width:"140px", backgroundColor:"orange", color: "black",  border:"1px solid black"}} onClick={()=>setDemo(1)}>1 проект</div> 
+    <div style={{width:"140px", backgroundColor:"orange", color: "black",  border:"1px solid black"}} onClick={()=>setDemo(2)}>2 проект</div> 
+    <div style={{width:"140px", backgroundColor:"orange",  color: "black", border:"1px solid black"}}  onClick={()=>setDemo(3)}>3 проект</div> 
+    <div style={{width:"140px", backgroundColor:"orange",  color: "black", border:"1px solid black"}}  onClick={()=>setDemo(4)}>4 проект {"почти собственная соцсеть :)"}</div> 
     </>
 )
 }
