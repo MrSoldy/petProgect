@@ -13,7 +13,6 @@ export const ContPeople = ({  people , setNewFriend, accepted, setNumberBtn, inf
       {profile? <ProfileUsers  User={User} setProfile={setProfile} setNewFriend={setNewFriend} setNumberBtn={setNumberBtn} accepted={accepted} infoProfile={infoProfile} />:
      <> <span className="nameTable">Список пользователей</span>
       <div className="usersAuth">
-      {console.log(people.filter((e)=>e.id !== User.id).length )}
         {people.filter((e)=>e.id !== User.id).length > 0 ? people.filter((e)=>e.id !== User.id).map(({name, secondname, id, phoneNumber, img, online, city}, index ) => (
           
             <div key={id} className="friendsBLock">
