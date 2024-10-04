@@ -16,7 +16,6 @@ export const ContFriends=({setDel, friends, add, setAdd, setNewFriend, User , pe
               <span> у тебя еще нет друзей</span>
             )}
           </div>
-
         </>
     )
 }

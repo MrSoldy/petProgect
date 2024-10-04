@@ -5,6 +5,13 @@
 
 button{cursor: pointer;}
 
+.buttonMainList{
+    width:140px;
+    background-color:orange; 
+    color: black;
+    border:1px solid black;
+}
+
 body{
     display: flex;
     justify-content: center;
