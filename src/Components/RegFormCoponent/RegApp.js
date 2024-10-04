@@ -16,6 +16,7 @@ export const RegApp = () => {
        } else {
        window.localStorage.setItem('AuthUser', JSON.stringify([state]))}
        setAuthorizedUsers(JSON.parse(window.localStorage.getItem('AuthUser')))
+       
   }
    const handlerAuth = (info) => {
     if (
